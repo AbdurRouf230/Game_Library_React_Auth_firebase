@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://example.com/images/pubg.png",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty Mobile",
+    "coverPhoto": "https://example.com/images/codm.png",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty Mobile delivers intense multiplayer battles, battle royale gameplay, and iconic maps from the COD franchise.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Minecraft",
+    "coverPhoto": "https://example.com/images/minecraft.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft is an open-world sandbox game where players can build, explore, craft, and survive in blocky worlds.",
+    "ratings": "4.8",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "4",
+    "title": "Free Fire MAX",
+    "coverPhoto": "https://example.com/images/freefire.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire MAX offers quick survival matches with enhanced graphics, unique characters, and action-packed gameplay.",
+    "ratings": "4.3",
+    "developer": "Garena"
+  },
+  {
+    "id": "5",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://example.com/images/genshin.png",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact is an anime-style open-world RPG with elemental combat, exploration, and immersive storytelling.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "6",
+    "title": "Valorant",
+    "coverPhoto": "https://example.com/images/valorant.png",
+    "category": "Tactical Shooter",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "Valorant combines precise gunplay with unique agent abilities in a competitive 5v5 tactical shooter experience.",
+    "ratings": "4.6",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "7",
+    "title": "League of Legends",
+    "coverPhoto": "https://example.com/images/lol.png",
+    "category": "MOBA",
+    "downloadLink": "https://www.leagueoflegends.com/",
+    "description": "League of Legends is a strategic multiplayer online battle arena game featuring champions and team-based combat.",
+    "ratings": "4.5",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "8",
+    "title": "Fortnite",
+    "coverPhoto": "https://example.com/images/fortnite.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.fortnite.com/",
+    "description": "Fortnite features creative building mechanics, survival gameplay, and exciting seasonal updates.",
+    "ratings": "4.4",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "9",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://example.com/images/coc.png",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Clash of Clans is a strategy game where players build villages, train troops, and battle opponents online.",
+    "ratings": "4.7",
+    "developer": "Supercell"
+  },
+  {
+    "id": "10",
+    "title": "Asphalt 9 Legends",
+    "coverPhoto": "https://example.com/images/asphalt9.png",
+    "category": "Racing",
+    "downloadLink": "https://asphaltlegends.com/",
+    "description": "Asphalt 9 Legends delivers arcade racing action with realistic cars, stunning graphics, and online competition.",
+    "ratings": "4.5",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "11",
+    "title": "EA Sports FC 26",
+    "coverPhoto": "https://example.com/images/fc26.png",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/",
+    "description": "EA Sports FC 26 offers realistic football gameplay, career modes, and multiplayer matches.",
+    "ratings": "4.4",
+    "developer": "Electronic Arts"
+  },
+  {
+    "id": "12",
+    "title": "Among Us",
+    "coverPhoto": "https://example.com/images/amongus.png",
+    "category": "Party",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "Among Us is a multiplayer social deduction game where crewmates must identify impostors aboard a spaceship.",
+    "ratings": "4.2",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "13",
+    "title": "Roblox",
+    "coverPhoto": "https://example.com/images/roblox.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.roblox.com/",
+    "description": "Roblox is a user-generated gaming platform featuring millions of games and virtual experiences.",
+    "ratings": "4.6",
+    "developer": "Roblox Corporation"
+  },
+  {
+    "id": "14",
+    "title": "The Witcher 3 Wild Hunt",
+    "coverPhoto": "https://example.com/images/witcher3.png",
+    "category": "RPG",
+    "downloadLink": "https://www.thewitcher.com/",
+    "description": "The Witcher 3 is a story-driven RPG featuring monster hunting, open-world exploration, and rich storytelling.",
+    "ratings": "4.9",
+    "developer": "CD Projekt Red"
+  },
+  {
+    "id": "15",
+    "title": "Apex Legends",
+    "coverPhoto": "https://example.com/images/apex.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "Apex Legends is a hero-based battle royale shooter with unique characters and squad-focused gameplay.",
+    "ratings": "4.5",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "16",
+    "title": "Candy Crush Saga",
+    "coverPhoto": "https://example.com/images/candycrush.png",
+    "category": "Puzzle",
+    "downloadLink": "https://www.king.com/game/candycrush",
+    "description": "Candy Crush Saga is a colorful puzzle game where players match candies to complete levels and challenges.",
+    "ratings": "4.4",
+    "developer": "King"
+  },
+  {
+    "id": "17",
+    "title": "Resident Evil 4 Remake",
+    "coverPhoto": "https://example.com/images/re4.png",
+    "category": "Horror",
+    "downloadLink": "https://www.residentevil.com/re4/",
+    "description": "Resident Evil 4 Remake modernizes the classic survival horror experience with improved visuals and gameplay.",
+    "ratings": "4.8",
+    "developer": "Capcom"
+  },
+  {
+    "id": "18",
+    "title": "Dota 2",
+    "coverPhoto": "https://example.com/images/dota2.png",
+    "category": "MOBA",
+    "downloadLink": "https://www.dota2.com/",
+    "description": "Dota 2 is a competitive multiplayer online battle arena game known for its deep strategy and esports scene.",
+    "ratings": "4.6",
+    "developer": "Valve"
+  },
+  {
+    "id": "19",
+    "title": "Need for Speed Heat",
+    "coverPhoto": "https://example.com/images/nfsheat.png",
+    "category": "Racing",
+    "downloadLink": "https://www.ea.com/games/need-for-speed/need-for-speed-heat",
+    "description": "Need for Speed Heat combines street racing, police chases, and car customization in an open-world environment.",
+    "ratings": "4.3",
+    "developer": "Electronic Arts"
+  },
+  {
+    "id": "20",
+    "title": "Cyberpunk 2077",
+    "coverPhoto": "https://example.com/images/cyberpunk2077.png",
+    "category": "Open World RPG",
+    "downloadLink": "https://www.cyberpunk.net/",
+    "description": "Cyberpunk 2077 is a futuristic open-world RPG featuring immersive storytelling, combat, and character customization.",
+    "ratings": "4.5",
+    "developer": "CD Projekt Red"
+  }
+]
