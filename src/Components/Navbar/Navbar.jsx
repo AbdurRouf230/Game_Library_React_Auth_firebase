@@ -36,7 +36,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <a to={"/"} className="btn btn-ghost text-xl">
           <img
             className="w-[60px] h-[60px]"
             src={logoLink}
@@ -48,7 +48,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">login</a>
+        <a className="btn bg-base-300">login</a>
       </div>
     </div>
   );

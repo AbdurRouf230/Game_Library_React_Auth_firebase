@@ -5,6 +5,7 @@ import heroImg from "./assets/hero.png";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { Outlet } from "react-router";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <main>
         <Outlet></Outlet>
       </main>
-      <footer></footer>
+      <Footer></Footer>
     </div>
   );
 }
