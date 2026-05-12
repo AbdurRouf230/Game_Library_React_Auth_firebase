@@ -1,7 +1,11 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import logoLink from "../../assets/logo_game_dev_library.png";
 import "./Navbar.css";
+import { use, useState } from "react";
+import { AuthContext } from "../../AuthContexts/AuthContext";
+import { toast } from "react-toastify";
 const Navbar = () => {
+  const { user, signOutUser } = use(AuthContext);
   const links = (
     <div className="flex gap-8 text-[15px] font-semibold rounded-xl">
       <NavLink to="/">Home</NavLink>
@@ -9,6 +13,22 @@ const Navbar = () => {
       <NavLink to="/register">Register</NavLink>
     </div>
   );
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        toast.success("Successfully signed out", {
+          position: "top-left",
+          autoClose: 5000,
+        });
+      })
+      .catch((err) => {
+        toast.error("Sign out failed", {
+          position: "top-left",
+          autoClose: 5000,
+        });
+      });
+  };
+
   const listItems = (
     <>
       <li>
@@ -62,7 +82,15 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-base-300">login</a>
+        {user ? (
+          <Link onClick={handleSignOut} className="btn bg-base-300">
+            Sign out
+          </Link>
+        ) : (
+          <Link to={"/login"} className="btn bg-base-300">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
