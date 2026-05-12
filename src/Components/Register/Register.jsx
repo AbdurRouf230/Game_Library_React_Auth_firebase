@@ -4,13 +4,37 @@ import { Link } from "react-router";
 
 const Register = () => {
   const [toggle, setToggle] = useState(false);
+  const [error, setError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
+
     const name = e.target.name.value;
     const email = e.target.email.value;
     const photoUrl = e.target.photoUrl.value;
     const password = e.target.password.value;
+
+    // Password Validation
+    const uppercaseRegex = /[A-Z]/;
+    const lowercaseRegex = /[a-z]/;
+    setError("");
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    }
+
+    if (!uppercaseRegex.test(password)) {
+      setError("Password must have at least one uppercase letter");
+      return;
+    }
+
+    if (!lowercaseRegex.test(password)) {
+      setError("Password must have at least one lowercase letter");
+      return;
+    }
+
     console.log(name, email, photoUrl, password);
+
+    // Registration logic here
   };
   return (
     <div className="hero bg-black mt-2 min-h-screen w-11/12 mx-auto mb-2 rounded-xl">
@@ -58,6 +82,7 @@ const Register = () => {
                     {toggle ? <EyeClosed></EyeClosed> : <Eye></Eye>}
                   </button>
                 </div>
+                <p className="font-bold">{error}</p>
                 <button className="btn btn-neutral mt-4">Register</button>
               </fieldset>
             </form>
