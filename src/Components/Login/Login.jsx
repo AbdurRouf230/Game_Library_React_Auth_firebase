@@ -2,8 +2,10 @@ import { use, useState } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../../AuthContexts/AuthContext";
 import { toast } from "react-toastify";
+import { Eye, EyeClosed } from "lucide-react";
 
 const Login = () => {
+  const [toggle, setToggle] = useState(false);
   const [error, setError] = useState("");
   const { signInUser, signInWithGoogle } = use(AuthContext);
   const handleLogin = (e) => {
@@ -65,12 +67,22 @@ const Login = () => {
                   placeholder="Email"
                 />
                 <label className="label">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="input"
-                  placeholder="Password"
-                />
+                <div className="relative w-full">
+                  <input
+                    type={`${toggle ? "text" : "password"}`}
+                    name="password"
+                    placeholder="Password"
+                    className="input w-full pr-16"
+                  />
+
+                  <button
+                    onClick={() => setToggle(!toggle)}
+                    type="button"
+                    className="absolute right-2 top-1/2 -translate-y-1/2"
+                  >
+                    {toggle ? <EyeClosed></EyeClosed> : <Eye></Eye>}
+                  </button>
+                </div>
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
