@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import logoLink from "../../assets/logo_game_dev_library.png";
+import "./Navbar.css";
 const Navbar = () => {
   const links = (
     <div className="flex gap-8 text-[15px] font-semibold rounded-xl">
@@ -7,6 +8,19 @@ const Navbar = () => {
       <NavLink to="/login">Login</NavLink>
       <NavLink to="/register">Register</NavLink>
     </div>
+  );
+  const listItems = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/login">Login</NavLink>
+      </li>
+      <li>
+        <NavLink to="/register">Register</NavLink>
+      </li>
+    </>
   );
   return (
     <div className="navbar bg-base-200 shadow-sm w-11/12 mx-auto mt-2">
@@ -33,7 +47,7 @@ const Navbar = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {links}
+            {listItems}
           </ul>
         </div>
         <a to={"/"} className="btn btn-ghost text-xl">
