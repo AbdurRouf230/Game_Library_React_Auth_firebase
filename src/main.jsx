@@ -12,6 +12,7 @@ import NotFoundPage from "./Components/NotFoundPage/NotFoundPage.jsx";
 import PrivateRoute from "./Private Route/PrivateRoute.jsx";
 import GameDetailsPage from "./Components/GameDetailsPage/GameDetailsPage.jsx";
 import ForgotPassPage from "./Components/FogotPassPage/ForgotPassPage.jsx";
+import UpdateProfile from "./Components/UpdateProfile/UpdateProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
         path: "/updateprofile",
         element: (
           <PrivateRoute>
-            <h1>Update Profile</h1>
+            <UpdateProfile></UpdateProfile>
           </PrivateRoute>
         ),
       },
