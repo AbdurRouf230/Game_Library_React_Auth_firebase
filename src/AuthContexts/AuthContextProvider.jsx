@@ -15,6 +15,7 @@ import auth from "../Auth_Firebase/firebase.init";
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const provider = new GoogleAuthProvider();
+  // console.log(children.document.title);
   const signInWithGoogle = () => {
     return signInWithPopup(auth, provider);
   };
@@ -44,6 +45,7 @@ const AuthContextProvider = ({ children }) => {
     signInUser,
     signOutUser,
     signInWithGoogle,
+    forgotPassword,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 };

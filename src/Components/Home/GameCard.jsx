@@ -42,7 +42,7 @@ const GameCard = ({ game }) => {
         </div>
 
         {/* Button */}
-        <Link to={`/game/${id}`}>
+        <Link to={`/gamedetails/${id}`}>
           <button className="w-full border-2 border-blue-500 text-blue-500 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300">
             Show Details
           </button>

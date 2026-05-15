@@ -8,6 +8,10 @@ import Home from "./Components/Home/Home.jsx";
 import Login from "./Components/Login/Login.jsx";
 import Register from "./Components/Register/Register.jsx";
 import AuthContextProvider from "./AuthContexts/AuthContextProvider.jsx";
+import NotFoundPage from "./Components/NotFoundPage/NotFoundPage.jsx";
+import PrivateRoute from "./Private Route/PrivateRoute.jsx";
+import GameDetailsPage from "./Components/GameDetailsPage/GameDetailsPage.jsx";
+import ForgotPassPage from "./Components/FogotPassPage/ForgotPassPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +30,31 @@ const router = createBrowserRouter([
         path: "/register",
         Component: Register,
       },
+      {
+        path: "/forgotpassword",
+        Component: ForgotPassPage,
+      },
+      {
+        path: "/updateprofile",
+        element: (
+          <PrivateRoute>
+            <h1>Update Profile</h1>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/gamedetails/:id",
+        element: (
+          <PrivateRoute>
+            <GameDetailsPage></GameDetailsPage>
+          </PrivateRoute>
+        ),
+      },
     ],
+  },
+  {
+    path: "*",
+    Component: NotFoundPage,
   },
 ]);
 createRoot(document.getElementById("root")).render(

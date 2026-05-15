@@ -1,17 +1,27 @@
 import { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthContexts/AuthContext";
 import { toast } from "react-toastify";
 import { Eye, EyeClosed } from "lucide-react";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const [error, setError] = useState("");
-  const { signInUser, signInWithGoogle } = use(AuthContext);
+  const { user, signInUser, signInWithGoogle } = use(AuthContext);
+
+  const [email, setEmail] = useState("");
+
+  if (user) {
+    navigate("/");
+    return;
+  }
+
   const handleLogin = (e) => {
     e.preventDefault();
     const pass = e.target.password.value;
     const email = e.target.email.value;
+    // setEmail(email);
     setError("");
     signInUser(email, pass)
       .then((result) => {
@@ -65,6 +75,7 @@ const Login = () => {
                   name="email"
                   className="input"
                   placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <label className="label">Password</label>
                 <div className="relative w-full">
@@ -84,7 +95,13 @@ const Login = () => {
                   </button>
                 </div>
                 <div>
-                  <a className="link link-hover">Forgot password?</a>
+                  <Link
+                    to={`/forgotpassword`}
+                    state={{ email }}
+                    className="link link-hover"
+                  >
+                    Forgot password?
+                  </Link>
                 </div>
                 <p className="font-bold">{error}</p>
                 <button className="btn btn-neutral mt-4">Login</button>

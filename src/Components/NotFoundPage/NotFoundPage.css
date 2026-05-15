@@ -1,0 +1,50 @@
+.app-not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin: 70px 80px; */
+  padding: 65px;
+  font-family: "Inter", sans-serif;
+}
+
+.apps-not-found-header {
+  font-size: xx-large;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.apps-not-found-des {
+  font-size: 20px;
+  color: #627382;
+  margin-bottom: 10px;
+}
+
+.apps-not-found-btn {
+  background: linear-gradient(to right, #632ee3, #9f62f2);
+  color: white;
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.apps-not-found-btn:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 1024px) {
+  .app-not-found-container {
+    margin: 300px 100px;
+  }
+}
+@media (max-width: 768px) {
+  .app-not-found-container {
+    margin: 10px 10px;
+  }
+}

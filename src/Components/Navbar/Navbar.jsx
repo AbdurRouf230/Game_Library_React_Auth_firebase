@@ -1,18 +1,43 @@
 import { Link, NavLink } from "react-router";
 import logoLink from "../../assets/logo_game_dev_library.png";
 import "./Navbar.css";
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthContexts/AuthContext";
 import { toast } from "react-toastify";
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
+  const [webtitle, setWebTitle] = useState(document.title);
+  useEffect(() => {
+    document.title = webtitle;
+  }, [webtitle]);
+
   const links = (
     <div className="flex gap-8 text-[15px] font-semibold rounded-xl">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/login">Login</NavLink>
-      <NavLink to="/register">Register</NavLink>
+      <NavLink to="/" onClick={() => setWebTitle("Home")}>
+        Home
+      </NavLink>
+
+      {user ? (
+        <NavLink
+          to="/updateprofile"
+          onClick={() => setWebTitle("Update Profile")}
+        >
+          Update Profile
+        </NavLink>
+      ) : (
+        <>
+          <NavLink to="/login" onClick={() => setWebTitle("Login")}>
+            Login
+          </NavLink>
+
+          <NavLink to="/register" onClick={() => setWebTitle("Register")}>
+            Register
+          </NavLink>
+        </>
+      )}
     </div>
   );
+
   const handleSignOut = () => {
     signOutUser()
       .then(() => {
@@ -32,13 +57,19 @@ const Navbar = () => {
   const listItems = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" onClick={() => setWebTitle("Home")}>
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/login" onClick={() => setWebTitle("Login")}>
+          Login
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/register" onClick={() => setWebTitle("Register")}>
+          Register
+        </NavLink>
       </li>
     </>
   );
@@ -83,11 +114,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <Link onClick={handleSignOut} className="btn bg-base-300">
-            Sign out
-          </Link>
+          <div className="flex items-center gap-4">
+            <img
+              className="h-[40px] w-[40px] rounded-4xl"
+              src={user.photoURL}
+              alt="Profile"
+            />
+            <Link onClick={handleSignOut} className="btn bg-base-300">
+              Sign out
+            </Link>
+          </div>
         ) : (
-          <Link to={"/login"} className="btn bg-base-300">
+          <Link
+            to={"/login"}
+            onClick={() => setWebTitle("Login")}
+            className="btn bg-base-300"
+          >
             Login
           </Link>
         )}

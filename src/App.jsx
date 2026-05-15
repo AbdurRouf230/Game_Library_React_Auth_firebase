@@ -8,6 +8,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { Outlet } from "react-router";
 import Footer from "./Components/Footer/Footer";
+import GameDetailsPage from "./Components/GameDetailsPage/GameDetailsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Outlet></Outlet>
       </main>
+      {/* <GameDetailsPage></GameDetailsPage> */}
       <ToastContainer />
       <Footer></Footer>
     </div>

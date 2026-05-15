@@ -1,10 +1,18 @@
 import { Eye, EyeClosed } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router";
+import { use, useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router";
+import { AuthContext } from "../../AuthContexts/AuthContext";
+import { toast } from "react-toastify";
 
 const Register = () => {
+  const { user, createUser } = use(AuthContext);
   const [toggle, setToggle] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+  if (user) {
+    navigate("/");
+    return;
+  }
   const handleRegister = (e) => {
     e.preventDefault();
 
@@ -13,7 +21,6 @@ const Register = () => {
     const photoUrl = e.target.photoUrl.value;
     const password = e.target.password.value;
 
-    // Password Validation
     const uppercaseRegex = /[A-Z]/;
     const lowercaseRegex = /[a-z]/;
     setError("");
@@ -34,7 +41,22 @@ const Register = () => {
 
     console.log(name, email, photoUrl, password);
 
-    // Registration logic here
+    // Registration logic
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        toast.success("Successfully registered", {
+          position: "top-left",
+          autoClose: 5000,
+        });
+      })
+      .catch((err) => {
+        console.log("Registration error is : ", err);
+        toast.error("Registration failed", {
+          position: "top-left",
+          autoClose: 5000,
+        });
+      });
   };
   return (
     <div className="hero bg-black mt-2 min-h-screen w-11/12 mx-auto mb-2 rounded-xl">
