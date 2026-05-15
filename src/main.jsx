@@ -13,6 +13,7 @@ import PrivateRoute from "./Private Route/PrivateRoute.jsx";
 import GameDetailsPage from "./Components/GameDetailsPage/GameDetailsPage.jsx";
 import ForgotPassPage from "./Components/FogotPassPage/ForgotPassPage.jsx";
 import UpdateProfile from "./Components/UpdateProfile/UpdateProfile.jsx";
+import Profile from "./Components/Profile/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <GameDetailsPage></GameDetailsPage>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
           </PrivateRoute>
         ),
       },

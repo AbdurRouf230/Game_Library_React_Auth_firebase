@@ -18,12 +18,17 @@ const Navbar = () => {
       </NavLink>
 
       {user ? (
-        <NavLink
-          to="/updateprofile"
-          onClick={() => setWebTitle("Update Profile")}
-        >
-          Update Profile
-        </NavLink>
+        <>
+          <NavLink to="/profile" onClick={() => setWebTitle("Profile")}>
+            Profile
+          </NavLink>
+          <NavLink
+            to="/updateprofile"
+            onClick={() => setWebTitle("Update Profile")}
+          >
+            Update Profile
+          </NavLink>
+        </>
       ) : (
         <>
           <NavLink to="/login" onClick={() => setWebTitle("Login")}>
